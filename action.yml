@@ -21,8 +21,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Run workflow.sh
-      run: |
+    - run: |
         chmod +x ./workflow.sh
         bash ./workflow.sh
       env:
