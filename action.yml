@@ -24,6 +24,7 @@ runs:
     - run: |
         chmod +x ./workflow.sh
         bash ./workflow.sh
+      shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github_token }}
         EVENT: ${{ inputs.event }}
