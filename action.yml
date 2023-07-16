@@ -21,13 +21,9 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    
-    - name: Trigger and Monitor Workflow
-      run: | 
-          chmod +x ./workflow.sh
-          bash ./workflow.sh
+    - run: | 
+        chmod +x ./workflow.sh
+        bash ./workflow.sh
       env:
         GITHUB_TOKEN: ${{ inputs.github_token }}
         EVENT: ${{ inputs.event }}
