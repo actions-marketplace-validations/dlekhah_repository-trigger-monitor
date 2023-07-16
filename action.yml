@@ -14,8 +14,8 @@ inputs:
   repo:
     description: 'Repository name'
     required: true
-  PAY:
-    description: 'Container version'
+  pay:
+    description: 'Payload content'
     required: false
 
 runs:
