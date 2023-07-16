@@ -5,9 +5,9 @@
   http_code=${response:${#response}-3}  # Extract the HTTP status code
   sleep 10
   if [[ $http_code -eq 204 ]]; then
-    workflows=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$OWNER/$REPO/actions/runs")
-    run_id=$(echo "$workflows" | jq -r '.workflow_runs[] | select(.event == "repository_dispatch") | .id' | head -n 1)
-    run_url=$(echo "$workflows" | jq -r '.workflow_runs[] | select(.event == "repository_dispatch") | .html_url' | head -n 1)
+    workflows=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$OWNER/$REPO/actions/runs?event=repository_dispatch&event_id=$EVENT")
+    run_id=$(echo "$workflows" | jq -r '.workflow_runs[] | .id' | head -n 1)
+    run_url=$(echo "$workflows" | jq -r '.workflow_runs[] | .html_url' | head -n 1)
     if [[ -n "$run_id" ]]; then
       echo "workflow run ID: $run_id"
       echo "url: $run_url"
