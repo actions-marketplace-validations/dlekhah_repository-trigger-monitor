@@ -14,7 +14,7 @@ inputs:
   repo:
     description: 'Repository name'
     required: true
-  pay:
+  payload:
     description: 'Payload content'
     required: false
 
@@ -30,4 +30,4 @@ runs:
         EVENT: ${{ inputs.event }}
         OWNER: ${{ inputs.owner }}
         REPO: ${{ inputs.repo }}
-        PAY: ${{ inputs.pay }}
+        PAY: ${{ inputs.payload }}
