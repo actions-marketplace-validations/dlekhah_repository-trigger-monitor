@@ -1,0 +1,36 @@
+name: Repository Dispatch Trigger
+description: Triggers a workflow and monitors its progress
+
+inputs:
+  github_token:
+    description: 'GitHub token for authentication'
+    required: true
+  event:
+    description: 'Event type to trigger the workflow'
+    required: true
+  owner:
+    description: 'Repository owner'
+    required: true
+  repo:
+    description: 'Repository name'
+    required: true
+  PAY:
+    description: 'Container version'
+    required: false
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Trigger and Monitor Workflow
+      run: | 
+          chmod +x ./workflow.sh
+          bash ./workflow.sh
+        env:
+          GITHUB_TOKEN: ${{ inputs.github_token }}
+          EVENT: ${{ inputs.event }}
+          OWNER: ${{ inputs.owner }}
+          REPO: ${{ inputs.repo }}
+          PAY: ${{ inputs.pay }}
