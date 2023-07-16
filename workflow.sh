@@ -38,7 +38,7 @@
           fi
 
         fi
-        sleep 10
+        sleep $STATUS_REFRESH_TIME
       done
     else
       echo "$REPO workflow not found"
