@@ -28,9 +28,9 @@ runs:
       run: | 
           chmod +x ./workflow.sh
           bash ./workflow.sh
-        env:
-          GITHUB_TOKEN: ${{ inputs.github_token }}
-          EVENT: ${{ inputs.event }}
-          OWNER: ${{ inputs.owner }}
-          REPO: ${{ inputs.repo }}
-          PAY: ${{ inputs.pay }}
+      env:
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+        EVENT: ${{ inputs.event }}
+        OWNER: ${{ inputs.owner }}
+        REPO: ${{ inputs.repo }}
+        PAY: ${{ inputs.pay }}
