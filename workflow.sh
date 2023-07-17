@@ -36,9 +36,10 @@
               echo "Result: $run_result"
               break
           fi
+       else
           sleep $STATUS_REFRESH_TIME
           echo "refreshing status in $STATUS_REFRESH_TIME seconds"
-        fi
+      fi
       done
     else
       echo "$REPO workflow not found"
