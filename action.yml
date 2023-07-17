@@ -30,8 +30,8 @@ runs:
       uses: actions/checkout@v2
       
     - run: |
-        chmod +x ${{ github.workspace }}/workflow.sh
-        ${{ github.workspace }}/workflow.sh
+        chmod +x $GITHUB_ACTION_PATH/workflow.sh
+        $GITHUB_ACTION_PATH/workflow.sh
       shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github_token }}
