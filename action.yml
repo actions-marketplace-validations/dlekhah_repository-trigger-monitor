@@ -42,5 +42,5 @@ runs:
         STATUS_REFRESH_TIME: ${{ inputs.status_refresh_time }}
 
 branding:
-  icon: 'target'
+  icon: 'fast-forward'
   color: 'gray-dark'
