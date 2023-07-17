@@ -13,6 +13,8 @@
       echo "url: $run_url"
       run_status=""
       while [[ "$run_status" != "completed" ]]; do
+        sleep $STATUS_REFRESH_TIME
+        echo "refreshing status in $STATUS_REFRESH_TIME seconds"
         run_status=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$run_id" | jq -r '.status')
         run_result=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$run_id" | jq -r '.conclusion')
         jobs_response=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$run_id/jobs")
@@ -36,10 +38,6 @@
               echo "Result: $run_result"
               break
           fi
-
-        else
-          sleep $STATUS_REFRESH_TIME
-          echo "refreshing in $STATUS_REFRESH_TIME seconds"
         fi
       done
     else
