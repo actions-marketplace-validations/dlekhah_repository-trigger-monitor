@@ -17,6 +17,7 @@ inputs:
   payload:
     description: 'Payload content'
     required: false
+    default: {}
   status_refresh_time:
     description: 'Status update refresh '
     required: false
