@@ -17,7 +17,6 @@
         run_result=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$run_id" | jq -r '.conclusion')
         jobs_response=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$run_id/jobs")
         jobs=$(echo "$jobs_response" | jq -r '.jobs[]  | "\(.name): status - [\(.status)] result - [\(.conclusion)]"')
-        in_progress_jobs_count=$(echo "$in_progress_jobs" | wc -l)
         echo ".................."
         echo "Pipeline progress:"
         echo "$jobs"
