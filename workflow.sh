@@ -1,7 +1,7 @@
   CLIENT_PAYLOAD=$PAY
 
   
-  response=$(curl -L -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" -w "%{http_code}" https://api.github.com/repos/$OWNER/$REPO/dispatches -d '{"event_type":"'"$EVENT"'","client_payload":'"$CLIENT_PAYLOAD"'')
+  response=$(curl -L -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" -w "%{http_code}" https://api.github.com/repos/$OWNER/$REPO/dispatches -d '{"event_type":"'"$EVENT"'","client_payload":{'"$CLIENT_PAYLOAD"'}')
   http_code=${response:${#response}-3}  # Extract the HTTP status code
   sleep 10
   if [[ $http_code -eq 204 ]]; then
