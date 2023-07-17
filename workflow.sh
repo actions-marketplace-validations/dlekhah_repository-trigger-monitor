@@ -37,8 +37,9 @@
               break
           fi
 
+        else
+          sleep -d "$STATUS_REFRESH_TIME"
         fi
-        sleep -d "$STATUS_REFRESH_TIME"
       done
     else
       echo "$REPO workflow not found"
