@@ -20,7 +20,7 @@ inputs:
   status_refresh_time:
     description: 'Status update refresh '
     required: false
-    default: 10
+    default: "10s"
 
 runs:
   using: composite
