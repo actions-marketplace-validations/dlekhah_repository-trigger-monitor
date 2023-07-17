@@ -30,7 +30,7 @@ runs:
       uses: actions/checkout@v2
       
     - run: |
-        chmod +x ./workflow.sh
+        chmod +x workflow.sh
         workflow.sh
       shell: bash
       env:
