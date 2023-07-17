@@ -26,6 +26,9 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
     - run: |
         chmod +x ./workflow.sh
         bash ./workflow.sh
