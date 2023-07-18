@@ -1,4 +1,4 @@
-name: Repository Dispatch Trigger
+name: Repository Dispatch Trigger and Monitor
 description: Triggers a workflow and monitors its progress
 
 inputs:
