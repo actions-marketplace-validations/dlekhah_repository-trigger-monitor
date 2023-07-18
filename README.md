@@ -20,7 +20,7 @@ These features make it convenient to monitor and leverage the results of the tri
 | `event`             | Event type to trigger the workflow. | true     | -       |
 | `owner`             | Repository owner.                   | true     | -       |
 | `repo`              | Repository name.                    | true     | -       |
-| `inputs`           | Client payload content for workflow inputs.                    | false    | '{}'    |
+| `inputs`           | Inputs to be sent to triggered workflow.                    | false    | '{}'    |
 | `status_refresh_time` | Status refresh interval in seconds.        | false    | 10      |
 
 The following table provides information about the inputs for this action:
