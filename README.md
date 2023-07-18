@@ -1,6 +1,17 @@
 # Repository Dispatch Trigger
 
-This GitHub Action triggers a workflow and monitors its progress.
+This GitHub Action triggers a workflow using repository_dispatch and monitors the progress. 
+
+## Features
+
+The Repository Dispatch Trigger action offers the following features:
+
+- Monitors the triggered workflow lifecycle, providing real-time updates on the status and progress of the workflow. This allows you to easily track the execution and completion of the triggered workflow.
+
+- Reflects the results of the triggered pipeline. Once the triggered workflow completes, you can access the results and outcomes of the workflow execution. This allows you to capture the outputs and use them for subsequent steps or processes in your workflow.
+
+These features make it convenient to monitor and leverage the results of the triggered workflow, enabling seamless integration and automation within your CI/CD pipelines or other automation processes.
+
 
 ## Inputs
 
