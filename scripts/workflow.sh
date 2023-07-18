@@ -36,7 +36,7 @@
               break
           fi
        else
-          echo "refreshing status in $STATUS_REFRESH_TIME seconds"
+          echo "refreshing status in $STATUS_REFRESH_TIME seconds..."
           sleep $STATUS_REFRESH_TIME
       fi
       done
