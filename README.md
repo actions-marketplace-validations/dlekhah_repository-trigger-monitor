@@ -53,7 +53,7 @@ jobs:
 
     steps:
       - name: Trigger Repository Dispatch
-        uses: your-username/repository-dispatch-action@v1
+        uses: dlekhah/repository-trigger-monitor@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           event: your-event-type
@@ -98,7 +98,7 @@ jobs:
 
     steps:
       - name: Trigger Repository Dispatch
-        uses: your-username/repository-dispatch-action@v1
+        uses: dlekhah/repository-trigger-monitor@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           event: ${{ matrix.event }}
