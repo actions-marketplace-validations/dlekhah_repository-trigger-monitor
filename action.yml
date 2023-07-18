@@ -14,8 +14,8 @@ inputs:
   repo:
     description: 'Repository name'
     required: true
-  payload:
-    description: 'Client payload content'
+  inputs:
+    description: 'Client payload content (inputs)'
     required: false
     default: '{}'
   status_refresh_time:
@@ -38,7 +38,7 @@ runs:
         EVENT: ${{ inputs.event }}
         OWNER: ${{ inputs.owner }}
         REPO: ${{ inputs.repo }}
-        PAY: ${{ inputs.payload }}
+        PAY: ${{ inputs.inputs }}
         STATUS_REFRESH_TIME: ${{ inputs.status_refresh_time }}
 
 branding:
