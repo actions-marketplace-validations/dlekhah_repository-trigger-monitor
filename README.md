@@ -30,7 +30,7 @@ The following table provides information about the inputs for this action:
 - `owner`: The owner of the repository where the workflow will be triggered.
 - `repo`: The name of the repository where the workflow will be triggered.
 - `payload`: The content of the payload to be sent along with the workflow trigger. This is an optional input, and the default value is an empty JSON object (`{}`).
-- `status_refresh_time`: The time interval (in seconds) for refreshing the status update of the triggered workflow. This is an optional input, and the default value is 10 seconds.
+- `status_refresh_time`: The time interval (in seconds) for refreshing the status update of the triggered workflow. This is an optional input in which the default value is 10 seconds.
 
 Make sure to replace your-username, your-event-type, your-repository-owner, and your-repository-name with the appropriate values for your repository and workflow. Instead of using the default secrets.GITHUB_TOKEN, you can use a Personal Access Token (PAT) by storing it as a secret named PAT_TOKEN in your repository's settings and referencing it in the github_token input. This allows you to have more control over the permissions and scope of the token used for authentication.
 
