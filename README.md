@@ -20,7 +20,7 @@ These features make it convenient to monitor and leverage the results of the tri
 | `event`             | Event type to trigger the workflow. | true     | -       |
 | `owner`             | Repository owner.                   | true     | -       |
 | `repo`              | Repository name.                    | true     | -       |
-| `payload`           | Client payload content for workflow inputs.                    | false    | '{}'    |
+| `inputs`           | Client payload content for workflow inputs.                    | false    | '{}'    |
 | `status_refresh_time` | Status refresh interval in seconds.        | false    | 10      |
 
 The following table provides information about the inputs for this action:
@@ -29,7 +29,7 @@ The following table provides information about the inputs for this action:
 - `event`: The event type that triggers the workflow. This can be any valid event type recognized by the GitHub API.
 - `owner`: The owner of the repository where the workflow will be triggered.
 - `repo`: The name of the repository where the workflow will be triggered.
-- `payload`: The content of the payload to be sent along with the workflow trigger. This is an optional input, and the default value is an empty JSON object (`{}`).
+- `inputs`: The workflow inputs to be sent along with the workflow trigger. This is an optional input, and the default value is an empty JSON object (`{}`).
 - `status_refresh_time`: The time interval (in seconds) for refreshing the status update of the triggered workflow. This is an optional input in which the default value is 10 seconds.
 
 Make sure to replace your-username, your-event-type, your-repository-owner, and your-repository-name with the appropriate values for your repository and workflow. Instead of using the default secrets.GITHUB_TOKEN, you can use a Personal Access Token (PAT) by storing it as a secret named PAT_TOKEN in your repository's settings and referencing it in the github_token input. This allows you to have more control over the permissions and scope of the token used for authentication.
@@ -59,7 +59,7 @@ jobs:
           event: your-event-type
           owner: your-repository-owner
           repo: your-repository-name
-          payload: '{"key": "value"}'
+          inputs: '{"key": "value"}'
           status_refresh_time: 5
 ```
 
@@ -104,6 +104,8 @@ jobs:
           event: ${{ matrix.event }}
           owner: ${{ matrix.owner }}
           repo: ${{ matrix.repo }}
+          inputs: '{"key": "value"}'
+          status_refresh_time: 5
 ```
 
 ## Screenshots
