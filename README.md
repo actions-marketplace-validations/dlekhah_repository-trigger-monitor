@@ -1,6 +1,6 @@
-# Repository Dispatch Trigger
+# Repository Dispatch Trigger and Monitor
 
-This GitHub Action triggers a workflow using repository_dispatch and monitors the progress. 
+This GitHub Action triggers a workflow using repository_dispatch whilst monitoring the progress end to end. 
 
 ## Features
 
