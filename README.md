@@ -21,7 +21,7 @@ These features make it convenient to monitor and leverage the results of the tri
 | `owner`             | Repository owner.                   | true     | -       |
 | `repo`              | Repository name.                    | true     | -       |
 | `payload`           | Payload content.                    | false    | '{}'    |
-| `status_refresh_time` | Status update refresh time.        | false    | 10      |
+| `status_refresh_time` | Status refresh interval in seconds.        | false    | 10      |
 
 The following table provides information about the inputs for this action:
 
