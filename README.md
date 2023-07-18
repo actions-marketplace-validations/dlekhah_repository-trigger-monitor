@@ -53,5 +53,5 @@ jobs:
 ```
 
 ## Screenshots
-![Example - Successful run](./screenshots/success.jpeg)
+![Example - Successful run](./screenshots/B89D7BEE-E943-44A5-BE4D-70F7BC1D9648.jpeg)
 ![Example - Cancelled run](./screenshots/cancelled.jpeg)
