@@ -50,5 +50,8 @@ jobs:
           repo: your-repository-name
           payload: '{"key": "value"}'
           status_refresh_time: 5
+```
 
-
+## Screenshots
+![Example - Successful run](./screenshots/success.jpeg)
+![Example - Cancelled run](./screenshots/cancelled.jpeg)
