@@ -19,7 +19,7 @@ inputs:
     required: false
     default: '{}'
   status_refresh_time:
-    description: 'Status update refresh '
+    description: 'Status refresh interval in seconds'
     required: false
     default: 10
 
