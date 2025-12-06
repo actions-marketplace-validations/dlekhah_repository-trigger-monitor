@@ -1,4 +1,4 @@
-# Repository Dispatch Trigger and Monitor
+# Repository Dispatcher and Monitor
 
 This GitHub Action triggers a workflow using repository_dispatch, whilst also monitoring the progress end to end. 
 
@@ -53,7 +53,7 @@ jobs:
 
     steps:
       - name: Trigger Repository Dispatch
-        uses: dlekhah/repository-trigger-monitor@v1
+        uses: dlekhah/repository-dispatcher-monitor@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           event: your-event-type
@@ -98,7 +98,7 @@ jobs:
 
     steps:
       - name: Trigger Repository Dispatch
-        uses: dlekhah/repository-trigger-monitor@v1
+        uses: dlekhah/repository-dispatcher-monitor@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           event: ${{ matrix.event }}

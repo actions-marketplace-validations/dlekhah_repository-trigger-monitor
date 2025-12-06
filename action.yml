@@ -1,5 +1,5 @@
-name: Repository Dispatch Trigger and Monitor
-description: Triggers a workflow and monitors its progress
+name: Repository Dispatcher and Monitor
+description: Centrally triggers one or more workflows whilst also providing real time progress monitoring.
 
 inputs:
   github_token:
